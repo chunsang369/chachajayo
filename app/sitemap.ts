@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 
-const BASE_URL = "https://hicarzautoplan.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://zerocars.netlify.app";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 정적 페이지들

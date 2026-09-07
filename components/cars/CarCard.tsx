@@ -63,7 +63,7 @@ export default function CarCard({ car, priority = false }: { car: CarData; prior
         className="aspect-[4/3] bg-[#f8f9fa] flex items-center justify-center p-3 shrink-0 relative overflow-hidden block cursor-pointer"
       >
         {car.rank && (
-          <div className="absolute top-2.5 left-2.5 z-10 bg-gradient-to-tr from-[#FF5E62] to-[#FF9966] text-white font-extrabold text-[12px] px-2.5 py-0.5 rounded-lg shadow-sm flex items-center gap-1 select-none">
+          <div className="absolute top-2.5 left-2.5 z-10 bg-[#FFB800] text-gray-900 font-black text-[12px] px-2.5 py-0.5 rounded-lg shadow-sm flex items-center gap-1 select-none">
             🔥 {car.rank}위
           </div>
         )}
@@ -92,7 +92,7 @@ export default function CarCard({ car, priority = false }: { car: CarData; prior
       <div className="p-3 lg:p-4 flex flex-col flex-1">
         <Link href={`/cars/${car.slug}`} className="flex justify-between items-start mb-3 gap-1 group/title cursor-pointer">
           <div className="flex-1 min-w-0">
-            <h4 className="font-bold text-[13px] lg:text-[17px] text-gray-900 break-keep group-hover/title:text-[#469BD9] transition-colors leading-snug">
+            <h4 className="font-bold text-[13px] lg:text-[17px] text-gray-900 break-keep group-hover/title:text-[#FF6800] transition-colors leading-snug">
               {car.modelName}
             </h4>
           </div>
@@ -110,7 +110,7 @@ export default function CarCard({ car, priority = false }: { car: CarData; prior
                 <span className="font-bold text-gray-900">{formatPrice(car.monthlyRent)}원</span>
               </div>
             ) : (
-              <span className="font-bold text-blue-600">상담 신청 필요</span>
+              <span className="font-bold text-[#FF6800]">상담 신청 필요</span>
             )}
           </div>
           <div className="flex justify-between items-center text-[14px] lg:text-[15px]">
@@ -121,7 +121,7 @@ export default function CarCard({ car, priority = false }: { car: CarData; prior
                 <span className="font-bold text-gray-900">{formatPrice(car.monthlyLease)}원</span>
               </div>
             ) : (
-              <span className="font-bold text-blue-600">상담 신청 필요</span>
+              <span className="font-bold text-[#FF6800]">상담 신청 필요</span>
             )}
           </div>
           
@@ -129,14 +129,14 @@ export default function CarCard({ car, priority = false }: { car: CarData; prior
           <div className="mt-4 flex gap-1.5 w-full">
             <Link 
               href={`/cars/${car.slug}`}
-              className="flex-1 flex items-center justify-center bg-[#469BD9] text-white py-2.5 rounded-md text-[13px] font-bold hover:bg-[#3a8dc7] transition-colors cursor-pointer text-center"
+              className="flex-1 flex items-center justify-center bg-[#FF6800] hover:bg-[#E55D00] text-white py-2.5 rounded-md text-[13px] font-bold transition-colors cursor-pointer text-center"
             >
               견적보기
             </Link>
             <button 
               type="button"
               onClick={handleQuickConsult}
-              className="flex-1 bg-white border border-[#469BD9] text-[#469BD9] py-2.5 rounded-md text-[13px] font-bold hover:bg-gray-50 transition-colors cursor-pointer"
+              className="flex-1 bg-white border border-[#FF6800] text-[#FF6800] py-2.5 rounded-md text-[13px] font-bold hover:bg-[#FFF4EB] transition-colors cursor-pointer"
             >
               빠른상담
             </button>

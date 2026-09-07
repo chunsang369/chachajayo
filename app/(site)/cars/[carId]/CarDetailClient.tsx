@@ -243,7 +243,7 @@ export default function CarDetailClient({ car }: { car: any }) {
     }
   };
 
-  const primaryColor = "#469BD9"; // 제로카즈 브랜드 컬러
+  const primaryColor = "#FF6800"; // 차차자요 브랜드 컬러
 
   return (
     <div className="min-h-screen bg-[#f5f5f5] pb-24 lg:pb-12 text-[#333]">
@@ -311,7 +311,7 @@ export default function CarDetailClient({ car }: { car: any }) {
           <div className="bg-white">
             <div className="px-5 py-4">
               <h2 className="text-xl font-bold flex items-center gap-2">
-                <span className="text-[#469BD9]">01</span> 차량선택
+                <span className="text-[#FF6800]">01</span> 차량선택
               </h2>
             </div>
             
@@ -326,7 +326,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                       onClick={() => setSelectedGradeIdx(g.idx)}
                       className={`text-left px-4 py-3 border rounded-sm text-[13px] font-medium transition-colors ${
                         selectedGradeIdx === g.idx 
-                        ? "border-[#469BD9] bg-[#f0f7ff] text-[#469BD9]" 
+                        ? "border-[#FF6800] bg-[#FFF4EB] text-[#FF6800]" 
                         : "border-[#e5e5e5] text-[#555] hover:bg-gray-50"
                       }`}
                     >
@@ -347,20 +347,20 @@ export default function CarDetailClient({ car }: { car: any }) {
                           key={`${t.idx}-${index}`}
                           onClick={() => setSelectedTrimIdx(t.idx)}
                           className={`flex items-center justify-between p-4 cursor-pointer transition-colors ${
-                            isSelected ? "bg-[#f0f7ff]" : "hover:bg-gray-50 bg-white"
+                            isSelected ? "bg-[#FFF4EB]" : "hover:bg-gray-50 bg-white"
                           }`}
                         >
                           <div className="flex items-center gap-3">
                             <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${
-                              isSelected ? "border-[#469BD9]" : "border-[#ccc]"
+                              isSelected ? "border-[#FF6800]" : "border-[#ccc]"
                             }`}>
-                              {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-[#469BD9]" />}
+                              {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-[#FF6800]" />}
                             </div>
-                            <span className={`text-[14px] ${isSelected ? "font-bold text-[#469BD9]" : "font-medium text-[#333]"}`}>
+                            <span className={`text-[14px] ${isSelected ? "font-bold text-[#FF6800]" : "font-medium text-[#333]"}`}>
                               {t.name}
                             </span>
                           </div>
-                          <span className={`text-[14px] font-bold ${isSelected ? "text-[#469BD9]" : "text-[#333]"}`}>
+                          <span className={`text-[14px] font-bold ${isSelected ? "text-[#FF6800]" : "text-[#333]"}`}>
                             {formatPriceWon(Number(t.price))}
                           </span>
                         </label>
@@ -375,7 +375,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                 <div className="mb-6">
                   <h3 className="text-sm font-bold mb-3 flex items-center justify-between">
                     <span>외장 색상</span>
-                    <span className="text-[#469BD9] font-bold text-[12px]">
+                    <span className="text-[#FF6800] font-bold text-[12px]">
                       {selectedExtColorData ? `(${formatPriceWon(Number(selectedExtColorData.price) || 0)})` : "(0원)"}
                     </span>
                   </h3>
@@ -400,7 +400,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                           onClick={() => setSelectedExtColor(color.idx)}
                           className={`w-[44px] h-[44px] rounded-full relative transition-all shadow-sm overflow-hidden ${
                             isSelected 
-                              ? "border-[2px] border-[#469BD9] scale-110 z-10" 
+                              ? "border-[2px] border-[#FF6800] scale-110 z-10" 
                               : "border border-[#e0e0e0] hover:border-gray-400"
                           }`}
                           style={{ 
@@ -426,7 +426,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                 <div>
                   <h3 className="text-sm font-bold mb-3 flex items-center justify-between">
                     <span>내장 색상</span>
-                    <span className="text-[#469BD9] font-bold text-[12px]">
+                    <span className="text-[#FF6800] font-bold text-[12px]">
                       {selectedIntColorData ? `(${formatPriceWon(Number(selectedIntColorData.price) || 0)})` : "(0원)"}
                     </span>
                   </h3>
@@ -452,7 +452,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                           onClick={() => setSelectedIntColor(color.idx)}
                           className={`w-[44px] h-[44px] rounded-full relative transition-all shadow-sm overflow-hidden ${
                             isSelected 
-                              ? "border-[2px] border-[#469BD9] scale-110 z-10" 
+                              ? "border-[2px] border-[#FF6800] scale-110 z-10" 
                               : "border border-[#e0e0e0] hover:border-gray-400"
                           }`}
                           style={{ 
@@ -479,7 +479,7 @@ export default function CarDetailClient({ car }: { car: any }) {
           <div className="bg-white">
             <div className="px-5 py-4">
               <h2 className="text-xl font-bold flex items-center gap-2">
-                <span className="text-[#469BD9]">02</span> 옵션 <span className="text-[13px] font-normal text-gray-500 ml-1">(중복 선택 가능)</span>
+                <span className="text-[#FF6800]">02</span> 옵션 <span className="text-[13px] font-normal text-gray-500 ml-1">(중복 선택 가능)</span>
               </h2>
             </div>
             <div className="p-0">
@@ -491,12 +491,12 @@ export default function CarDetailClient({ car }: { car: any }) {
                       <label 
                         key={`opt-${opt.idx}-${index}`}
                         className={`flex items-center justify-between p-5 cursor-pointer transition-colors ${
-                          isSelected ? "bg-[#f0f7ff]" : "hover:bg-gray-50 bg-white"
+                          isSelected ? "bg-[#FFF4EB]" : "hover:bg-gray-50 bg-white"
                         }`}
                       >
                         <div className="flex items-center gap-3">
                           <div className={`w-5 h-5 rounded flex items-center justify-center border ${
-                            isSelected ? "bg-[#469BD9] border-[#469BD9]" : "bg-white border-[#ccc]"
+                            isSelected ? "bg-[#FF6800] border-[#FF6800]" : "bg-white border-[#ccc]"
                           }`}>
                             {isSelected && (
                               <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -510,11 +510,11 @@ export default function CarDetailClient({ car }: { car: any }) {
                               onChange={() => setSelectedOptions(prev => ({ ...prev, [opt.idx]: !prev[opt.idx] }))}
                             />
                           </div>
-                          <span className={`text-[14px] ${isSelected ? "font-bold text-[#0068B7]" : "font-medium text-[#333]"}`}>
+                          <span className={`text-[14px] ${isSelected ? "font-bold text-[#E55D00]" : "font-medium text-[#333]"}`}>
                             {opt.title}
                           </span>
                         </div>
-                        <span className={`text-[14px] font-bold ${isSelected ? "text-[#0068B7]" : "text-[#333]"}`}>
+                        <span className={`text-[14px] font-bold ${isSelected ? "text-[#E55D00]" : "text-[#333]"}`}>
                           {formatPriceWon(Number(opt.price))}
                         </span>
                       </label>
@@ -530,11 +530,11 @@ export default function CarDetailClient({ car }: { car: any }) {
           <div className="bg-white">
             <div className="px-5 py-4">
               <h2 className="text-xl font-bold flex items-center gap-2">
-                <span className="text-[#469BD9]">03</span> 계약조건
+                <span className="text-[#FF6800]">03</span> 계약조건
               </h2>
             </div>
             <div className="px-5 pt-3 pb-1">
-              <p className="text-[13px] text-[#469BD9]">많이 진행되는 계약 조건이 설정되어 있어요!</p>
+              <p className="text-[13px] text-[#FF6800]">많이 진행되는 계약 조건이 설정되어 있어요!</p>
             </div>
             <div className="p-5 space-y-6">
               {/* 구입방법 */}
@@ -543,7 +543,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                 <div className="grid grid-cols-2 border border-[#e5e5e5] rounded-sm overflow-hidden">
                   {(["RENT","LEASE"] as BuyMethod[]).map(m => (
                     <button key={m} onClick={() => setBuyMethod(m)}
-                      className={`py-3 text-[14px] font-bold transition-colors ${buyMethod === m ? "bg-[#469BD9] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
+                      className={`py-3 text-[14px] font-bold transition-colors ${buyMethod === m ? "bg-[#FF6800] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
                     >{m === "RENT" ? "렌트" : "리스"}</button>
                   ))}
                 </div>
@@ -554,7 +554,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                 <div className="grid grid-cols-3 border border-[#e5e5e5] rounded-sm overflow-hidden">
                   {(["36","48","60"] as Period[]).map(p => (
                     <button key={p} onClick={() => setPeriod(p)}
-                      className={`py-3 text-[14px] font-bold transition-colors ${period === p ? "bg-[#469BD9] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
+                      className={`py-3 text-[14px] font-bold transition-colors ${period === p ? "bg-[#FF6800] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
                     >{p}개월</button>
                   ))}
                 </div>
@@ -565,7 +565,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                 <div className="grid grid-cols-2 border border-[#e5e5e5] rounded-sm overflow-hidden">
                   {(["10000","20000"] as Mileage[]).map(m => (
                     <button key={m} onClick={() => setMileage(m)}
-                      className={`py-3 text-[13px] font-bold transition-colors ${mileage === m ? "bg-[#469BD9] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
+                      className={`py-3 text-[13px] font-bold transition-colors ${mileage === m ? "bg-[#FF6800] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
                     >{Number(m)/10000}만</button>
                   ))}
                 </div>
@@ -584,7 +584,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                           setDeposit(guarantee !== "0" ? "DEPOSIT_30" : "NO_DEPOSIT");
                         }
                       }}
-                      className={`py-3 text-[13px] font-bold transition-colors ${prepay === p ? "bg-[#469BD9] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
+                      className={`py-3 text-[13px] font-bold transition-colors ${prepay === p ? "bg-[#FF6800] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
                     >{p}%</button>
                   ))}
                 </div>
@@ -603,7 +603,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                           setDeposit(prepay !== "0" ? "PREPAY_30" : "NO_DEPOSIT");
                         }
                       }}
-                      className={`py-3 text-[13px] font-bold transition-colors ${guarantee === g ? "bg-[#469BD9] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
+                      className={`py-3 text-[13px] font-bold transition-colors ${guarantee === g ? "bg-[#FF6800] text-white" : "bg-[#f9f9f9] text-gray-500 hover:bg-gray-100"}`}
                     >{g}%</button>
                   ))}
                 </div>
@@ -623,7 +623,7 @@ export default function CarDetailClient({ car }: { car: any }) {
               <div className="flex">
                 <div className="flex-1 py-3 text-center text-[12px] font-bold text-gray-400">01 차량 선택</div>
                 <div className="flex-1 py-3 text-center text-[12px] font-bold text-gray-400">02 옵션</div>
-                <div className="flex-1 py-3 text-center text-[12px] font-bold text-[#469BD9]">03 계약조건</div>
+                <div className="flex-1 py-3 text-center text-[12px] font-bold text-[#FF6800]">03 계약조건</div>
               </div>
             </div>
 
@@ -647,11 +647,11 @@ export default function CarDetailClient({ car }: { car: any }) {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-[13px] text-[#555]">외장</span>
-                    <span className="text-[13px] text-[#469BD9] font-bold">(+{(Number(selectedExtColorData?.price) || 0).toLocaleString()})</span>
+                    <span className="text-[13px] text-[#FF6800] font-bold">(+{(Number(selectedExtColorData?.price) || 0).toLocaleString()})</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-[13px] text-[#555]">내장</span>
-                    <span className="text-[13px] text-[#469BD9] font-bold">(+{(Number(selectedIntColorData?.price) || 0).toLocaleString()})</span>
+                    <span className="text-[13px] text-[#FF6800] font-bold">(+{(Number(selectedIntColorData?.price) || 0).toLocaleString()})</span>
                   </div>
                 </div>
 
@@ -679,17 +679,17 @@ export default function CarDetailClient({ car }: { car: any }) {
                   <span className="text-[14px] font-bold text-[#333]">{buyMethod === "RENT" ? "렌트" : "리스"}</span>
                 </div>
 
-                {/* 제로카즈 혜택 */}
+                {/* 차차자요 혜택 */}
                 <div className="mb-4">
                   <div className="flex justify-between items-baseline mb-2">
                     <span className="text-[15px] font-bold text-[#333]">월 {buyMethod === "RENT" ? "렌트료" : "리스료"}</span>
                     <div className="text-right">
                       {monthlyPrice > 0 ? (
-                        <span className="text-[26px] font-extrabold text-[#469BD9]">
+                        <span className="text-[26px] font-extrabold text-[#FF6800]">
                           {monthlyPrice.toLocaleString()} <span className="text-[18px]">원</span>
                         </span>
                       ) : (
-                        <span className="text-[26px] font-extrabold text-[#469BD9]">
+                        <span className="text-[26px] font-extrabold text-[#FF6800]">
                           상담 신청 필요
                         </span>
                       )}
@@ -729,7 +729,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                       placeholder="이름"
                       value={form.name}
                       onChange={e => setForm({...form, name: e.target.value})}
-                      className="w-1/3 px-3 py-2.5 border border-[#ccc] rounded-sm text-[13px] focus:outline-none focus:border-[#469BD9]"
+                      className="w-1/3 px-3 py-2.5 border border-[#ccc] rounded-sm text-[13px] focus:outline-none focus:border-[#FF6800]"
                       required
                     />
                     <input
@@ -737,7 +737,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                       placeholder="휴대폰 번호 (- 없이 입력)"
                       value={form.phone}
                       onChange={e => setForm({...form, phone: e.target.value})}
-                      className="w-2/3 px-3 py-2.5 border border-[#ccc] rounded-sm text-[13px] focus:outline-none focus:border-[#469BD9]"
+                      className="w-2/3 px-3 py-2.5 border border-[#ccc] rounded-sm text-[13px] focus:outline-none focus:border-[#FF6800]"
                       required
                     />
                   </div>
@@ -754,13 +754,13 @@ export default function CarDetailClient({ car }: { car: any }) {
                           consent3: e.target.checked,
                           consent4: e.target.checked 
                         })}
-                        className="w-4 h-4 accent-[#469BD9]" 
+                        className="w-4 h-4 accent-[#FF6800]" 
                       />
                       전체 동의
                     </label>
                     <div className="flex items-center justify-between">
                       <label className="flex items-center gap-2 text-[11px] text-gray-600 cursor-pointer">
-                        <input type="checkbox" checked={form.consent1} onChange={e => setForm({...form, consent1: e.target.checked})} className="w-3.5 h-3.5 accent-[#469BD9]" />
+                        <input type="checkbox" checked={form.consent1} onChange={e => setForm({...form, consent1: e.target.checked})} className="w-3.5 h-3.5 accent-[#FF6800]" />
                         [필수] 서비스 이용약관에 동의
                       </label>
                       <Link href="/terms" target="_blank" className="text-[11px] text-gray-400 hover:text-gray-600 underline">
@@ -769,7 +769,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                     </div>
                     <div className="flex items-center justify-between">
                       <label className="flex items-center gap-2 text-[11px] text-gray-600 cursor-pointer">
-                        <input type="checkbox" checked={form.consent2} onChange={e => setForm({...form, consent2: e.target.checked})} className="w-3.5 h-3.5 accent-[#469BD9]" />
+                        <input type="checkbox" checked={form.consent2} onChange={e => setForm({...form, consent2: e.target.checked})} className="w-3.5 h-3.5 accent-[#FF6800]" />
                         [필수] 개인정보 수집·이용에 동의
                       </label>
                       <Link href="/privacy" target="_blank" className="text-[11px] text-gray-400 hover:text-gray-600 underline">
@@ -778,7 +778,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                     </div>
                     <div className="flex items-center justify-between">
                       <label className="flex items-center gap-2 text-[11px] text-gray-600 cursor-pointer">
-                        <input type="checkbox" checked={form.consent3} onChange={e => setForm({...form, consent3: e.target.checked})} className="w-3.5 h-3.5 accent-[#469BD9]" />
+                        <input type="checkbox" checked={form.consent3} onChange={e => setForm({...form, consent3: e.target.checked})} className="w-3.5 h-3.5 accent-[#FF6800]" />
                         [필수] 개인정보 제3자 제공에 동의
                       </label>
                       <Link href="/privacy" target="_blank" className="text-[11px] text-gray-400 hover:text-gray-600 underline">
@@ -787,7 +787,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                     </div>
                     <div className="flex items-center justify-between">
                       <label className="flex items-center gap-2 text-[11px] text-gray-600 cursor-pointer">
-                        <input type="checkbox" checked={form.consent4} onChange={e => setForm({...form, consent4: e.target.checked})} className="w-3.5 h-3.5 accent-[#469BD9]" />
+                        <input type="checkbox" checked={form.consent4} onChange={e => setForm({...form, consent4: e.target.checked})} className="w-3.5 h-3.5 accent-[#FF6800]" />
                         [선택] 마케팅 정보 수신에 동의
                       </label>
                     </div>
@@ -796,7 +796,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-4 bg-[#469BD9] hover:bg-[#3a8dc7] text-white font-bold text-[16px] rounded-sm transition-colors mt-2"
+                    className="w-full py-4 bg-[#FF6800] hover:bg-[#E55D00] text-white font-bold text-[16px] rounded-sm transition-colors mt-2"
                   >
                     {submitting ? "전송 중..." : "견적 문의하기"}
                   </button>
@@ -824,24 +824,24 @@ export default function CarDetailClient({ car }: { car: any }) {
           onClick={() => {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
           }}
-          className="bg-[#469BD9] text-white px-6 py-2.5 rounded-sm font-bold text-[13px]"
+          className="bg-[#FF6800] text-white px-6 py-2.5 rounded-sm font-bold text-[13px]"
         >
           간편 견적 문의
         </button>
       </div>
 
-      {/* ─── 제로카즈 커스텀 성공 모달창 (브라우저 기본 alert 대체) ─── */}
+      {/* ─── 차차자요 커스텀 성공 모달창 (브라우저 기본 alert 대체) ─── */}
       {showSuccessModal && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-all duration-300">
           <div className="bg-white rounded-2xl p-6 max-w-[340px] w-full mx-4 shadow-2xl border border-gray-100 animate-in fade-in zoom-in-95 duration-200">
             {/* 상단 브랜딩 & 체크 아이콘 */}
             <div className="flex flex-col items-center text-center mb-5">
-              <div className="w-12 h-12 rounded-full bg-[#f0f7ff] flex items-center justify-center mb-3">
-                <svg className="w-6 h-6 text-[#469BD9]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <div className="w-12 h-12 rounded-full bg-[#FFF4EB] flex items-center justify-center mb-3">
+                <svg className="w-6 h-6 text-[#FF6800]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 tracking-tight">제로카즈</h3>
+              <h3 className="text-lg font-bold text-gray-900 tracking-tight">차차자요</h3>
             </div>
 
             {/* 본문 안내 내용 (줄바꿈 대응) */}
@@ -853,7 +853,7 @@ export default function CarDetailClient({ car }: { car: any }) {
                   간편상담사:{" "}
                   <a 
                     href="tel:010-5813-8090" 
-                    className="font-bold text-[#469BD9] underline underline-offset-2 hover:text-[#3a8dc7] transition-colors"
+                    className="font-bold text-[#FF6800] underline underline-offset-2 hover:text-[#E55D00] transition-colors"
                   >
                     010-5813-8090
                   </a>
@@ -866,7 +866,7 @@ export default function CarDetailClient({ car }: { car: any }) {
             {/* 확인 버튼 */}
             <button
               onClick={() => setShowSuccessModal(false)}
-              className="w-full h-12 rounded-xl bg-[#469BD9] text-white text-sm font-bold hover:bg-[#3a8dc7] active:scale-[0.98] transition-all shadow-md shadow-[#469BD9]/20"
+              className="w-full h-12 rounded-xl bg-[#FF6800] text-white text-sm font-bold hover:bg-[#E55D00] active:scale-[0.98] transition-all shadow-md shadow-[#FF6800]/20"
             >
               확인
             </button>

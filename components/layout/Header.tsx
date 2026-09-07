@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Headset } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { label: "저신용 장기렌트", href: "/low-credit" },
-  { label: "빠른 간편견적", href: "/#quote-form" },
+  { label: "간편 견적", href: "/#car-quotes" },
+  { label: "견적 문의", href: "/#quote-form" },
   { label: "계약후기", href: "/reviews" },
   { label: "FAQ", href: "/faq" },
 ];
@@ -101,12 +101,12 @@ export default function Header() {
               href="/"
               onClick={handleLogoClick}
               className="flex items-center shrink-0 h-full relative z-10 cursor-pointer py-2"
-              aria-label="제로카즈 홈"
+              aria-label="차차자요 홈"
             >
               <img
-                src="/logo.png"
-                alt="zerocars"
-                className="h-8 lg:h-9 w-auto object-contain"
+                src="/images/chachajayo-logo.png"
+                alt="차차자요"
+                className="h-10 lg:h-11 w-auto object-contain"
               />
             </Link>
 
@@ -117,34 +117,36 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleNavClick(item.href, e)}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#469BD9] hover:bg-gray-50 rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#FF6800] hover:bg-[#FFF4EB]/60 rounded-lg transition-colors"
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
 
-            {/* 데스크톱 우측 빠른상담 CTA (1.3배 확대, 5px 하단 이동, 통통 튀는 애니메이션 2s) */}
+            {/* 데스크톱 우측 전화상담 CTA (전화기 아이콘 추가) */}
             <div className="hidden lg:flex items-center relative top-[5px]">
-              <button
-                onClick={scrollToQuoteForm}
-                className="animate-bounce hover:animate-none bg-[#469BD9] hover:bg-[#3a8dc7] text-white px-7 py-2.5 rounded-full text-[17px] font-extrabold transition-all shadow-lg hover:shadow-xl shadow-[#469BD9]/35 hover:scale-105 active:scale-95 cursor-pointer tracking-tight"
+              <a
+                href="tel:010-5813-8090"
+                className="inline-flex items-center justify-center gap-2 animate-bounce hover:animate-none bg-[#FB6502] hover:bg-[#E55B00] text-white px-6 py-2.5 rounded-full text-[16px] font-extrabold transition-all shadow-lg hover:shadow-xl shadow-[#FB6502]/30 hover:scale-105 active:scale-95 cursor-pointer tracking-tight"
                 style={{ animationDuration: "2s" }}
               >
-                빠른상담
-              </button>
+                <Phone className="w-4.5 h-4.5 text-white fill-white" />
+                <span>전화상담</span>
+              </a>
             </div>
 
-            {/* 모바일 우측 빠른상담 버튼 (1.3배 확대, 5px 하단 이동) */}
+            {/* 모바일 우측 전화상담 버튼 (전화기 아이콘 추가) */}
             <div className="flex lg:hidden items-center gap-2">
-              <button
-                onClick={scrollToQuoteForm}
-                className="relative top-[5px] animate-bounce hover:animate-none bg-[#469BD9] hover:bg-[#3a8dc7] text-white px-4 py-2 rounded-full text-sm font-extrabold transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer tracking-tight"
+              <a
+                href="tel:010-5813-8090"
+                className="relative top-[5px] inline-flex items-center justify-center gap-1.5 animate-bounce hover:animate-none bg-[#FB6502] hover:bg-[#E55B00] text-white px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-extrabold transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer tracking-tight"
                 style={{ animationDuration: "2s" }}
-                aria-label="빠른상담"
+                aria-label="전화상담"
               >
-                빠른상담
-              </button>
+                <Phone className="w-3.5 h-3.5 text-white fill-white" />
+                <span>전화상담</span>
+              </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-9 h-9 flex items-center justify-center rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
@@ -179,7 +181,7 @@ export default function Header() {
       >
         {/* 드로어 상단 */}
         <div className="flex items-center justify-between px-5 h-14 border-b border-gray-100">
-          <span className="text-base font-bold text-[#469BD9]">메뉴</span>
+          <span className="text-base font-bold text-[#FF6800]">메뉴</span>
           <button
             onClick={() => setIsOpen(false)}
             className="w-9 h-9 flex items-center justify-center rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
@@ -196,7 +198,7 @@ export default function Header() {
               key={item.href}
               href={item.href}
               onClick={(e) => handleNavClick(item.href, e)}
-              className="flex items-center px-3 py-3.5 text-[15px] font-medium text-gray-800 hover:text-[#469BD9] hover:bg-gray-50 rounded-xl transition-colors"
+              className="flex items-center px-3 py-3.5 text-[15px] font-medium text-gray-800 hover:text-[#FF6800] hover:bg-[#FFF4EB]/60 rounded-xl transition-colors"
             >
               {item.label}
             </Link>
@@ -205,15 +207,14 @@ export default function Header() {
 
         {/* 드로어 하단 CTA */}
         <div className="absolute bottom-0 left-0 right-0 p-5 border-t border-gray-100 bg-gray-50/50">
-          <button
-            onClick={() => {
-              setIsOpen(false);
-              scrollToQuoteForm();
-            }}
-            className="flex items-center justify-center w-full py-3.5 rounded-xl bg-[#469BD9] text-white text-sm font-bold hover:bg-[#3a8dc7] transition-colors shadow-sm cursor-pointer"
+          <a
+            href="tel:010-5813-8090"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#FB6502] hover:bg-[#E55B00] text-white text-sm font-bold transition-all shadow-md shadow-[#FB6502]/20 cursor-pointer"
           >
-            빠른상담 신청하기
-          </button>
+            <Phone className="w-4 h-4 text-white fill-white" />
+            <span>전화상담 연결</span>
+          </a>
         </div>
       </nav>
 

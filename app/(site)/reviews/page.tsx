@@ -5,8 +5,8 @@ import Link from "next/link";
 import { getCachedReviews } from "@/lib/cache";
 
 export const metadata: Metadata = {
-  title: "계약 후기 — 제로카즈",
-  description: "제로카즈에서 장기렌트·리스를 이용하신 고객님들의 생생한 후기를 확인하세요.",
+  title: "계약 후기 — 차차자요",
+  description: "차차자요에서 장기렌트·리스를 이용하신 고객님들의 생생한 후기를 확인하세요.",
 };
 
 export default async function ReviewsPage() {
@@ -47,7 +47,7 @@ export default async function ReviewsPage() {
                 )}
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-medium bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full">{review.carModel}</span>
+                    <span className="text-xs font-semibold bg-[#FFF4EB] text-[#E55D00] px-2.5 py-1 rounded-full">{review.carModel}</span>
 
                   </div>
                   <h3 className="font-bold text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors mb-2 line-clamp-2">

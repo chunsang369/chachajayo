@@ -8,7 +8,7 @@ export default function ConsultChannel() {
     <section className="py-8 bg-white" aria-label="상담 채널">
       <div className="mx-auto max-w-[1200px] px-4 lg:px-8">
         <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-1">
-          제로카즈 고객센터
+          차차자요 고객센터
         </h2>
         <p className="text-sm text-gray-500 mb-5">
           편리한 상담 채널을 이용하세요
@@ -18,12 +18,12 @@ export default function ConsultChannel() {
           {/* 전화 상담 */}
           <Link
             href="tel:1577-2617"
-            className="flex flex-col items-center justify-center gap-2 py-6 rounded-xl border border-gray-200 hover:border-[#469BD9] hover:shadow-md transition-all group"
+            className="flex flex-col items-center justify-center gap-2 py-6 rounded-xl border border-gray-200 hover:border-[#FF6800] hover:shadow-md transition-all group"
           >
-            <div className="w-12 h-12 rounded-full bg-[#469BD9]/10 flex items-center justify-center group-hover:bg-[#469BD9]/20 transition-colors">
-              <Phone className="w-5 h-5 text-[#469BD9]" />
+            <div className="w-12 h-12 rounded-full bg-[#FFF4EB] flex items-center justify-center group-hover:bg-orange-100 transition-colors">
+              <Phone className="w-5 h-5 text-[#FF6800]" />
             </div>
-            <span className="text-lg font-bold text-[#469BD9]">1577-2617</span>
+            <span className="text-lg font-bold text-[#FF6800]">1577-2617</span>
             <span className="text-xs text-gray-400">대표전화</span>
           </Link>
 

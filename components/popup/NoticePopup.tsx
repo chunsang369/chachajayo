@@ -20,13 +20,13 @@ interface NoticePopupProps {
   openInNewTab?: boolean;
 }
 
-const STORAGE_KEY = "zerocarz_hide_notice_popup_until";
-const SESSION_KEY = "zerocarz_popup_dismissed_session";
+const STORAGE_KEY = "chachajayo_hide_notice_popup_until";
+const SESSION_KEY = "chachajayo_popup_dismissed_session";
 
 // 중복 렌더링 방지용 전역 싱글톤 플래그
 declare global {
   interface Window {
-    __zerocars_popup_active?: boolean;
+    __chachajayo_popup_active?: boolean;
   }
 }
 
@@ -49,10 +49,10 @@ export default function NoticePopup({
   useEffect(() => {
     // 0. 전역 싱글톤 체크: 이미 활성화된 팝업이 있다면 중복 실행 방지
     if (typeof window !== "undefined") {
-      if (window.__zerocars_popup_active) {
+      if (window.__chachajayo_popup_active) {
         return;
       }
-      window.__zerocars_popup_active = true;
+      window.__chachajayo_popup_active = true;
     }
 
     // 1. '오늘 하루 보지 않기' 확인 (localStorage)
@@ -133,14 +133,14 @@ export default function NoticePopup({
           timerRef.current = null;
         }
         if (typeof window !== "undefined") {
-          window.__zerocars_popup_active = false;
+          window.__chachajayo_popup_active = false;
         }
       };
     } else {
       openPopupOnce();
       return () => {
         if (typeof window !== "undefined") {
-          window.__zerocars_popup_active = false;
+          window.__chachajayo_popup_active = false;
         }
       };
     }
@@ -203,7 +203,7 @@ export default function NoticePopup({
         <div className="relative w-full h-full">
           <Image
             src={imageSrc}
-            alt="제로카즈 프로모션 공지"
+            alt="차차자요 프로모션 공지"
             fill
             sizes="(max-width: 768px) 90vw, 420px"
             className="object-cover"
@@ -215,13 +215,13 @@ export default function NoticePopup({
       ) : (
         /* 이미지가 아직 준비되지 않았을 때 표시되는 고품질 플레이스홀더 배너 */
         <div className="w-full h-full bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0284C7] p-7 flex flex-col justify-between text-white relative overflow-hidden select-none">
-          <div className="absolute -top-12 -right-12 w-44 h-44 bg-blue-500/20 rounded-full blur-2xl pointer-events-none" />
-          <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-sky-400/20 rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute -top-12 -right-12 w-44 h-44 bg-[#FF6800]/20 rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-[#FFB800]/20 rounded-full blur-2xl pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
           <div className="relative z-10 flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-xs font-semibold text-blue-200 tracking-wide">
-              <Sparkles className="w-3.5 h-3.5 text-blue-300 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FF6800]/20 border border-orange-400/30 text-xs font-semibold text-orange-200 tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
               SPECIAL PROMOTION
             </span>
             <span className="inline-flex items-center gap-1 text-[11px] text-slate-300 font-medium">
@@ -231,12 +231,12 @@ export default function NoticePopup({
           </div>
 
           <div className="relative z-10 my-auto text-left py-2">
-            <p className="text-xs sm:text-sm font-semibold text-sky-300 mb-1">
-              신차 장기렌트 · 제로카즈 단독 혜택
+            <p className="text-xs sm:text-sm font-semibold text-[#FFB800] mb-1">
+              신차 장기렌트 · 차차자요 단독 혜택
             </p>
-            <h3 className="text-2xl sm:text-[26px] font-black tracking-tight leading-snug">
-              저신용자도 OK! <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-100 to-sky-300">
+            <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight leading-snug">
+              신용 걱정 없이 바로 타는 <br />
+              <span className="text-white">
                 초기비용 0원 맞춤 출고
               </span>
             </h3>
@@ -247,7 +247,7 @@ export default function NoticePopup({
           </div>
 
           <div className="relative z-10 pt-2">
-            <div className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30 transition-all">
+            <div className="w-full py-3 px-4 rounded-xl bg-[#FF6800] hover:bg-[#E55D00] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#FF6800]/30 transition-all">
               <span>특별 견적 바로 확인하기</span>
               <ArrowRight className="w-4 h-4" />
             </div>
@@ -306,7 +306,7 @@ export default function NoticePopup({
               type="checkbox"
               checked={dontShowToday}
               onChange={(e) => setDontShowToday(e.target.checked)}
-              className="w-4 h-4 rounded border-neutral-700 bg-neutral-800 text-blue-600 focus:ring-blue-500 focus:ring-offset-neutral-900 accent-blue-600 cursor-pointer transition-all"
+              className="w-4 h-4 rounded border-neutral-700 bg-neutral-800 text-[#FF6800] focus:ring-[#FF6800] focus:ring-offset-neutral-900 accent-[#FF6800] cursor-pointer transition-all"
             />
             <span className="text-[13px] font-medium tracking-tight">오늘 하루 보지 않기</span>
           </label>

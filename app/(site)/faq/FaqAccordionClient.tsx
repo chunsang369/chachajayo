@@ -75,7 +75,7 @@ export default function FaqAccordionClient({ faqs }: { faqs: FaqItem[] }) {
               {openId === faq.id && (
                 <div className="px-5 pb-5 border-t border-[var(--color-border)]">
                   <div className="flex items-start gap-3 pt-4">
-                    <span className="text-blue-600 font-bold text-sm mt-0.5">A</span>
+                    <span className="text-[#FF6800] font-bold text-sm mt-0.5">A</span>
                     <p className="text-sm text-[var(--color-text-muted)] leading-relaxed whitespace-pre-wrap">
                       {faq.answer}
                     </p>

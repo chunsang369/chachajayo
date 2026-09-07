@@ -42,7 +42,7 @@ export default function ReviewCarouselClient({ reviews }: { reviews: Review[] })
         {/* 헤더 */}
         <div className="flex items-center justify-between mb-5">
           <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
-            제로카즈 이용후기
+            차차자요 이용후기
           </h2>
           <Link
             href="/reviews"

@@ -16,7 +16,7 @@ export default function CarDetailError({
         <div className="flex gap-3 justify-center">
           <button
             onClick={reset}
-            className="px-6 py-2.5 rounded-xl bg-[#469BD9] text-white font-bold text-sm hover:bg-[#3a8dc7] transition-colors"
+            className="px-6 py-2.5 rounded-xl bg-[#FF6800] text-white font-bold text-sm hover:bg-[#E55D00] transition-colors"
           >
             다시 시도
           </button>

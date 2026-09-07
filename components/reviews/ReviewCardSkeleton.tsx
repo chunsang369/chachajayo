@@ -7,7 +7,7 @@ export default function ReviewCardSkeleton() {
       {/* 텍스트 영역 */}
       <div className="p-5">
         <div className="flex items-center gap-2 mb-2">
-          <div className="h-5 bg-blue-50 rounded-full w-20" />
+          <div className="h-5 bg-orange-50 rounded-full w-20" />
         </div>
         <div className="h-5 bg-gray-200 rounded w-4/5 mb-2" />
         <div className="space-y-1.5 mb-3">

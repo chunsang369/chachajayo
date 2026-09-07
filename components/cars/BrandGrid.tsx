@@ -308,7 +308,7 @@ export default function BrandGrid() {
       case 'mercedes-benz': return { bg: 'bg-[#EBEBEB]', textCol: 'text-[#333333]' };
       case 'audi': return { bg: 'bg-[#FCE6E6]', textCol: 'text-[#CC0000]' };
       case 'volvo': return { bg: 'bg-[#E6EEF5]', textCol: 'text-[#003057]' };
-      case 'popular': return { bg: 'bg-gradient-to-tr from-[#FF5E62] to-[#FF9966]', textCol: 'text-white' };
+      case 'popular': return { bg: 'bg-[#FFB800]', textCol: 'text-gray-900' };
       default: return { bg: 'bg-[#F4F5F7]', textCol: 'text-[#333333]' };
     }
   };
@@ -327,7 +327,7 @@ export default function BrandGrid() {
   };
 
   return (
-    <section className="py-8 bg-white" aria-label="관심 차종 선택">
+    <section id="car-quotes" className="py-8 bg-white scroll-mt-20" aria-label="관심 차종 선택">
       <div className="mx-auto max-w-[1200px] px-4 lg:px-8">
         {/* 제목 & 탭 */}
         <div className="flex items-end justify-between mb-4 lg:mb-6">
@@ -339,14 +339,14 @@ export default function BrandGrid() {
           <div className="flex items-center text-sm lg:text-base font-medium text-gray-400 gap-3 mb-0.5">
             <button
               onClick={() => handleTabChange("domestic")}
-              className={cn(tab === "domestic" ? "text-[#469BD9] font-bold" : "hover:text-gray-600")}
+              className={cn(tab === "domestic" ? "text-[#FF6800] font-bold" : "hover:text-gray-600")}
             >
               국산
             </button>
             <span className="text-gray-300">|</span>
             <button
               onClick={() => handleTabChange("import")}
-              className={cn(tab === "import" ? "text-[#469BD9] font-bold" : "hover:text-gray-600")}
+              className={cn(tab === "import" ? "text-[#FF6800] font-bold" : "hover:text-gray-600")}
             >
               수입
             </button>
@@ -358,12 +358,12 @@ export default function BrandGrid() {
           <div className={cn(
             "relative flex items-center rounded-xl border transition-all duration-200",
             isSearchMode
-              ? "border-[#469BD9] bg-white shadow-[0_0_0_3px_rgba(70,155,217,0.1)]"
+              ? "border-[#FF6800] bg-white shadow-[0_0_0_3px_rgba(255,104,0,0.15)]"
               : "border-gray-200 bg-[#f8f9fa] hover:border-gray-300"
           )}>
             <Search className={cn(
               "absolute left-3.5 w-4 h-4 transition-colors pointer-events-none",
-              isSearchMode ? "text-[#469BD9]" : "text-gray-400"
+              isSearchMode ? "text-[#FF6800]" : "text-gray-400"
             )} />
             <input
               ref={searchInputRef}
@@ -411,12 +411,12 @@ export default function BrandGrid() {
                     <button
                       onClick={() => handleBrandClick(brand.slug)}
                       className={`flex flex-col items-center justify-center gap-1.5 shrink-0 w-[64px] h-[84px] rounded-2xl transition-all ${
-                        isSelected ? 'bg-[#F4F6F8]' : 'bg-transparent hover:bg-slate-50'
+                        isSelected ? 'bg-[#FFF4EB]' : 'bg-transparent hover:bg-slate-50'
                       }`}
                     >
                       <div
                         className={`w-12 h-12 rounded-[16px] flex items-center justify-center font-extrabold text-[14px] ${details.bg} ${details.textCol} ${
-                          isSelected ? 'border-[2px] border-[#469BD9]' : 'border border-transparent'
+                          isSelected ? 'border-[2px] border-[#FF6800]' : 'border border-transparent'
                         }`}
                       >
                         {brand.slug === 'popular' ? (
@@ -436,7 +436,7 @@ export default function BrandGrid() {
                       </div>
                       <span
                         className={`text-[12px] tracking-tight ${
-                          isSelected ? 'text-[#469BD9] font-bold' : 'text-gray-500 font-medium'
+                          isSelected ? 'text-[#FF6800] font-bold' : 'text-gray-500 font-medium'
                         }`}
                       >
                         {brand.name}
@@ -456,12 +456,12 @@ export default function BrandGrid() {
               <p className="text-sm text-gray-500">
                 {isSearching ? (
                   <span className="flex items-center gap-1.5">
-                    <span className="inline-block w-3.5 h-3.5 border-2 border-[#469BD9] border-t-transparent rounded-full animate-spin" />
+                    <span className="inline-block w-3.5 h-3.5 border-2 border-[#FF6800] border-t-transparent rounded-full animate-spin" />
                     검색 중...
                   </span>
                 ) : (
                   <>
-                    <span className="font-semibold text-[#469BD9]">&ldquo;{searchQuery}&rdquo;</span>
+                    <span className="font-semibold text-[#FF6800]">&ldquo;{searchQuery}&rdquo;</span>
                     {" "}검색 결과 <span className="font-bold text-gray-900">{brandCars.length}</span>건
                   </>
                 )}

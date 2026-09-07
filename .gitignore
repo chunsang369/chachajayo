@@ -45,3 +45,13 @@ next-env.d.ts
 # crawling data
 /data/
 scratch/
+
+# scratch & model tools at root
+/realesrgan/
+realesrgan.zip
+/*.png
+/*.jpg
+/check_style*.js
+/make_sorento_hero.js
+/test_inpaint_plate.js
+/test_orig_patch.js

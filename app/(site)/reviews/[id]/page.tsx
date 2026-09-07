@@ -31,7 +31,7 @@ export default async function ReviewDetailPage({
 
         {/* Meta */}
         <div className="flex flex-wrap items-center gap-3 mb-4">
-          <span className="text-xs font-medium bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full">{review.carModel}</span>
+          <span className="text-xs font-medium bg-[#FFF4EB] text-[#E55D00] px-3 py-1.5 rounded-full">{review.carModel}</span>
           <span className="text-xs text-[var(--color-text-muted)]">{review.customerName}</span>
           <span className="text-xs text-[var(--color-text-muted)]" suppressHydrationWarning>{new Date(review.contractDate).toLocaleDateString("ko-KR")}</span>
 

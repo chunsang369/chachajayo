@@ -12,10 +12,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* 1. Hero Visual Section */}
-      <HeroMain 
-        backgroundImage="/hero/hero-bg.jpg" 
-        backgroundVideo="/hero/luxury-hero.mp4" 
-      />
+      <HeroMain />
 
       {/* 2. 관심 차종 선택 (브랜드 그리드) */}
       <BrandGrid />
@@ -23,7 +20,7 @@ export default function HomePage() {
       {/* 3. 토스 스타일 핵심 특징 카드 */}
       <TrustFeatureCards />
 
-      {/* 8. 제로카즈 이용후기 */}
+      {/* 8. 차차자요 이용후기 */}
       <Suspense fallback={<ReviewCarouselSkeleton />}>
         <ReviewCarousel />
       </Suspense>

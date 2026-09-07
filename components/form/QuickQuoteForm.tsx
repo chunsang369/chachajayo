@@ -133,11 +133,11 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
   }
 
   return (
-    <section id="quote-form" className="scroll-mt-16 lg:scroll-mt-20 py-12 lg:py-24 bg-[#f7f8fa]" aria-label="간편견적문의">
+    <section id="quote-form" className="scroll-mt-16 lg:scroll-mt-20 py-12 lg:py-24 bg-[#f7f8fa]" aria-label="견적 문의">
       <div className="mx-auto max-w-[1200px] px-4 lg:px-8">
         <div className="text-center mb-8 lg:mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold text-[#0a2540] mb-2">
-            간편견적문의
+            견적 문의
           </h2>
           <p className="text-sm lg:text-base text-gray-500">
             간단한 정보를 입력하시면 견적확인이 가능합니다.
@@ -152,16 +152,16 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
           >
             {/* 선택된 차종 알림 배너 */}
             {formData.carOfInterest && (
-              <div className="mb-6 p-4 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-between gap-3 animate-in fade-in slide-in-from-top-2 duration-300">
+              <div className="mb-6 p-4 rounded-xl bg-[#FFF4EB] border border-orange-200 flex items-center justify-between gap-3 animate-in fade-in slide-in-from-top-2 duration-300">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-lg bg-blue-500 text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-9 h-9 rounded-lg bg-[#FF6800] text-white flex items-center justify-center shrink-0 shadow-xs">
                     <Car className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-xs font-semibold text-blue-700">선택된 견적 상담 차량</span>
+                      <span className="text-xs font-semibold text-[#E55D00]">선택된 견적 상담 차량</span>
                       {formData.carOfInterest.includes("무심사") && (
-                        <span className="px-2 py-0.5 rounded-md bg-[#1d7ef3] text-white text-[10px] font-extrabold tracking-tight shadow-xs">
+                        <span className="px-2 py-0.5 rounded-md bg-[#FFB800] text-gray-900 text-[10px] font-black tracking-tight shadow-xs">
                           무심사희망
                         </span>
                       )}
@@ -193,7 +193,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                   onChange={(e) => setFormData((p) => ({ ...p, name: e.target.value }))}
                   placeholder="홍길동"
                   required
-                  className="w-full h-12 px-4 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#469BD9] focus:ring-2 focus:ring-[#469BD9]/20 transition-all"
+                  className="w-full h-12 px-4 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#FF6800] focus:ring-2 focus:ring-[#FF6800]/20 transition-all"
                 />
               </div>
 
@@ -208,7 +208,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                   onChange={handlePhoneChange}
                   placeholder="010-1234-5678"
                   required
-                  className="w-full h-12 px-4 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#469BD9] focus:ring-2 focus:ring-[#469BD9]/20 transition-all"
+                  className="w-full h-12 px-4 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#FF6800] focus:ring-2 focus:ring-[#FF6800]/20 transition-all"
                 />
               </div>
 
@@ -229,7 +229,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                         key={m.value}
                         className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border cursor-pointer text-sm font-medium transition-all ${
                           isSelected
-                            ? "border-[#469BD9] bg-[#469BD9]/5 text-[#469BD9]"
+                            ? "border-[#FF6800] bg-[#FFF4EB] text-[#FF6800] font-bold"
                             : "border-gray-200 text-gray-500 hover:border-gray-300"
                         }`}
                       >
@@ -256,7 +256,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                 <select
                   value={formData.availableTime}
                   onChange={(e) => setFormData((p) => ({ ...p, availableTime: e.target.value }))}
-                  className="w-full h-12 px-4 rounded-xl border border-gray-200 text-sm text-gray-700 focus:outline-none focus:border-[#469BD9] focus:ring-2 focus:ring-[#469BD9]/20 transition-all appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%236b7280%22%20d%3D%22M3%205l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_16px_center]"
+                  className="w-full h-12 px-4 rounded-xl border border-gray-200 text-sm text-gray-700 focus:outline-none focus:border-[#FF6800] focus:ring-2 focus:ring-[#FF6800]/20 transition-all appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%236b7280%22%20d%3D%22M3%205l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_16px_center]"
                 >
                   <option value="">언제든 가능</option>
                   <option value="09-12">오전 (09~12시)</option>
@@ -284,7 +284,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                         onClick={() => setFormData((p) => ({ ...p, creditScore: item.value }))}
                         className={`h-12 flex items-center justify-center rounded-xl border text-sm font-bold transition-all cursor-pointer ${
                           isSelected
-                            ? "border-[#469BD9] bg-[#469BD9]/10 text-[#469BD9] shadow-sm"
+                            ? "border-[#FF6800] bg-[#FFF4EB] text-[#FF6800] shadow-sm"
                             : "border-gray-200 text-gray-600 hover:border-gray-300 bg-white"
                         }`}
                       >
@@ -305,7 +305,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                   value={formData.carOfInterest}
                   onChange={(e) => setFormData((p) => ({ ...p, carOfInterest: e.target.value }))}
                   placeholder="예: 그랜저, K8, BMW 5시리즈"
-                  className="w-full h-12 px-4 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#469BD9] focus:ring-2 focus:ring-[#469BD9]/20 transition-all"
+                  className="w-full h-12 px-4 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#FF6800] focus:ring-2 focus:ring-[#FF6800]/20 transition-all"
                 />
               </div>
 
@@ -319,10 +319,10 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                       ...formData, 
                       consent1: e.target.checked, 
                       consent2: e.target.checked, 
-                      consent3: e.target.checked,
+                      consent3: e.target.checked, 
                       consent4: e.target.checked 
                     })}
-                    className="w-4 h-4 rounded border-gray-300 text-[#469BD9] focus:ring-[#469BD9]" 
+                    className="w-4 h-4 rounded border-gray-300 text-[#FF6800] focus:ring-[#FF6800]" 
                   />
                   전체 동의
                 </label>
@@ -332,7 +332,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                       type="checkbox" 
                       checked={formData.consent1} 
                       onChange={e => setFormData({...formData, consent1: e.target.checked})} 
-                      className="w-3.5 h-3.5 rounded border-gray-300 text-[#469BD9] focus:ring-[#469BD9]" 
+                      className="w-3.5 h-3.5 rounded border-gray-300 text-[#FF6800] focus:ring-[#FF6800]" 
                     />
                     [필수] 서비스 이용약관에 동의
                   </label>
@@ -346,7 +346,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                       type="checkbox" 
                       checked={formData.consent2} 
                       onChange={e => setFormData({...formData, consent2: e.target.checked})} 
-                      className="w-3.5 h-3.5 rounded border-gray-300 text-[#469BD9] focus:ring-[#469BD9]" 
+                      className="w-3.5 h-3.5 rounded border-gray-300 text-[#FF6800] focus:ring-[#FF6800]" 
                     />
                     [필수] 개인정보 수집·이용에 동의
                   </label>
@@ -360,7 +360,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                       type="checkbox" 
                       checked={formData.consent3} 
                       onChange={e => setFormData({...formData, consent3: e.target.checked})} 
-                      className="w-3.5 h-3.5 rounded border-gray-300 text-[#469BD9] focus:ring-[#469BD9]" 
+                      className="w-3.5 h-3.5 rounded border-gray-300 text-[#FF6800] focus:ring-[#FF6800]" 
                     />
                     [필수] 개인정보 제3자 제공에 동의
                   </label>
@@ -374,7 +374,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                       type="checkbox" 
                       checked={formData.consent4} 
                       onChange={e => setFormData({...formData, consent4: e.target.checked})} 
-                      className="w-3.5 h-3.5 rounded border-gray-300 text-[#469BD9] focus:ring-[#469BD9]" 
+                      className="w-3.5 h-3.5 rounded border-gray-300 text-[#FF6800] focus:ring-[#FF6800]" 
                     />
                     [선택] 마케팅 정보 수신에 동의
                   </label>
@@ -385,7 +385,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
               <button
                 type="submit"
                 disabled={isSubmitting || !formData.consent1 || !formData.consent2 || !formData.consent3}
-                className="w-full h-[52px] rounded-xl bg-[#469BD9] text-white text-base font-bold hover:bg-[#3a8dc7] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-[#469BD9]/20"
+                className="w-full h-[52px] rounded-xl bg-[#FF6800] text-white text-base font-bold hover:bg-[#E55D00] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-[#FF6800]/20 cursor-pointer"
               >
                 {isSubmitting ? "전송 중..." : "견적 확인하기"}
               </button>
@@ -394,18 +394,18 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
 
         </div>
       </div>
-      {/* ─── 제로카즈 커스텀 성공 모달창 (브라우저 기본 alert 대체) ─── */}
+      {/* ─── 차차자요 커스텀 성공 모달창 (브라우저 기본 alert 대체) ─── */}
       {showSuccessModal && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-all duration-300">
           <div className="bg-white rounded-2xl p-6 max-w-[340px] w-full mx-4 shadow-2xl border border-gray-100 animate-in fade-in zoom-in-95 duration-200">
             {/* 상단 브랜딩 & 체크 아이콘 */}
             <div className="flex flex-col items-center text-center mb-5">
-              <div className="w-12 h-12 rounded-full bg-[#f0f7ff] flex items-center justify-center mb-3">
-                <svg className="w-6 h-6 text-[#469BD9]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <div className="w-12 h-12 rounded-full bg-[#FFF4EB] flex items-center justify-center mb-3">
+                <svg className="w-6 h-6 text-[#FF6800]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 tracking-tight">제로카즈</h3>
+              <h3 className="text-lg font-bold text-gray-900 tracking-tight">차차자요</h3>
             </div>
 
             {/* 본문 안내 내용 (줄바꿈 대응) */}
@@ -417,7 +417,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
                   간편상담사:{" "}
                   <a 
                     href="tel:010-5813-8090" 
-                    className="font-bold text-[#469BD9] underline underline-offset-2 hover:text-[#3a8dc7] transition-colors"
+                    className="font-bold text-[#FF6800] underline underline-offset-2 hover:text-[#E55D00] transition-colors"
                   >
                     010-5813-8090
                   </a>
@@ -430,7 +430,7 @@ export default function QuickQuoteForm({ initialCarOfInterest = "" }: QuickQuote
             {/* 확인 버튼 */}
             <button
               onClick={() => setShowSuccessModal(false)}
-              className="w-full h-12 rounded-xl bg-[#469BD9] text-white text-sm font-bold hover:bg-[#3a8dc7] active:scale-[0.98] transition-all shadow-md shadow-[#469BD9]/20"
+              className="w-full h-12 rounded-xl bg-[#FF6800] text-white text-sm font-bold hover:bg-[#E55D00] active:scale-[0.98] transition-all shadow-md shadow-[#FF6800]/20 cursor-pointer"
             >
               확인
             </button>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const COMPANY_INFO = {
-  brand: "제로카즈(ZeroCarz)",
+  brand: "차차자요(ChaChajayo)",
   name: "주식회사 한신종합기획",
   ceo: "이예찬",
   address: "경기 용인시 기흥구 영통로525번길 24 황곡프라자 3층",
@@ -26,20 +26,26 @@ const LEGAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a2540] text-gray-300" aria-label="사이트 정보">
-      <div className="mx-auto max-w-[1200px] px-4 lg:px-8 py-12 lg:py-16">
+    <footer
+      className="text-white relative overflow-hidden"
+      style={{
+        background: "linear-gradient(180deg, #E63E00 0%, #C42F00 100%)",
+      }}
+      aria-label="사이트 정보"
+    >
+      <div className="mx-auto max-w-[1200px] px-4 lg:px-8 pt-8 pb-12 lg:pt-10 lg:pb-16">
         {/* 데스크톱: 4컬럼 / 모바일: 스택 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 items-start">
           {/* 1. 회사 정보 및 공식 인증 배지 */}
-          <div className="lg:col-span-1 flex flex-col items-start gap-4 mb-4">
+          <div className="lg:col-span-1 flex flex-col items-start gap-8 mt-0 lg:-mt-1">
             <Link href="/" className="inline-flex items-center">
               <img
-                src="/logo_footer.png"
-                alt="zerocars"
-                className="h-9 lg:h-10 w-auto object-contain"
+                src="/images/chachajayo-logo-footer.png"
+                alt="차차자요"
+                className="w-[185px] lg:w-[215px] h-auto object-contain block"
               />
             </Link>
-            <div className="w-[165px] lg:w-[185px] rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-white">
+            <div className="w-[165px] lg:w-[185px] rounded-2xl overflow-hidden shadow-lg border border-white/20 bg-white ml-1.5">
               <img
                 src="/images/credit-approval-badge-original.png"
                 alt="신용무관승인제 공식 등록 업체"
@@ -50,13 +56,13 @@ export default function Footer() {
 
           {/* 2. 메뉴 */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">서비스</h3>
+            <h3 className="text-sm font-bold text-white mb-4 tracking-wide">서비스</h3>
             <ul className="space-y-2.5">
               {MENU_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-orange-100/80 hover:text-white hover:underline transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -67,32 +73,32 @@ export default function Footer() {
 
           {/* 3. 연락처 */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">연락처</h3>
+            <h3 className="text-sm font-bold text-white mb-4 tracking-wide">연락처</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href={`tel:${COMPANY_INFO.phone}`}
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-sm text-orange-100/90 hover:text-white transition-colors"
                 >
-                  <Phone className="w-4 h-4 shrink-0" />
+                  <Phone className="w-4 h-4 shrink-0 text-white" />
                   {COMPANY_INFO.phone}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${COMPANY_INFO.email}`}
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-sm text-orange-100/90 hover:text-white transition-colors"
                 >
-                  <Mail className="w-4 h-4 shrink-0" />
+                  <Mail className="w-4 h-4 shrink-0 text-white" />
                   {COMPANY_INFO.email}
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-sm text-gray-400">
-                <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 text-sm text-orange-100/90">
+                <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-white" />
                 {COMPANY_INFO.address}
               </li>
             </ul>
-            <div className="mt-5 text-xs text-gray-500 space-y-1">
+            <div className="mt-5 text-xs text-orange-200/75 space-y-1">
               <p>상호: {COMPANY_INFO.name}</p>
               <p>대표: {COMPANY_INFO.ceo}</p>
               <p>사업자등록번호: {COMPANY_INFO.businessNo}</p>
@@ -102,7 +108,7 @@ export default function Footer() {
 
           {/* 4. 약관 */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">법적 고지</h3>
+            <h3 className="text-sm font-bold text-white mb-4 tracking-wide">법적 고지</h3>
             <ul className="space-y-2.5">
               {LEGAL_LINKS.map((link) => (
                 <li key={link.label}>
@@ -110,8 +116,8 @@ export default function Footer() {
                     href={link.href}
                     className={`text-sm transition-colors ${
                       link.bold
-                        ? "text-white font-semibold hover:text-gray-200"
-                        : "text-gray-400 hover:text-white"
+                        ? "text-white font-bold hover:text-orange-200 underline"
+                        : "text-orange-100/80 hover:text-white hover:underline"
                     }`}
                   >
                     {link.label}
@@ -123,8 +129,8 @@ export default function Footer() {
         </div>
 
         {/* 구분선 + 카피라이트 */}
-        <div className="mt-12 pt-8">
-          <p className="text-xs text-gray-500 text-center">
+        <div className="mt-12 pt-8 border-t border-white/15">
+          <p className="text-xs text-orange-200/70 text-center">
             © {new Date().getFullYear()} {COMPANY_INFO.brand}. All rights reserved.
           </p>
         </div>

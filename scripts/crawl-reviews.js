@@ -214,14 +214,14 @@ async function main() {
   function rebrandText(text) {
     if (!text) return "";
     return text
-      .replace(/황제오토플랜/g, "제로카즈")
-      .replace(/황제오토/g, "제로카즈")
-      .replace(/하이카즈/g, "제로카즈")
-      .replace(/차살때닷컴/g, "제로카즈")
-      .replace(/차살때/g, "제로카즈")
-      .replace(/마지막으로 제로카즈에게!/g, "제로카즈 이용 후기")
-      .replace(/마지막으로 하이카즈에게!/g, "제로카즈 이용 후기")
-      .replace(/마지막으로 황제오토플랜에게!/g, "제로카즈 이용 후기");
+      .replace(/황제오토플랜/g, "차차자요")
+      .replace(/황제오토/g, "차차자요")
+      .replace(/하이카즈/g, "차차자요")
+      .replace(/차살때닷컴/g, "차차자요")
+      .replace(/차살때/g, "차차자요")
+      .replace(/마지막으로 차차자요에게!/g, "차차자요 이용 후기")
+      .replace(/마지막으로 하이카즈에게!/g, "차차자요 이용 후기")
+      .replace(/마지막으로 황제오토플랜에게!/g, "차차자요 이용 후기");
   }
 
   // 플래너 이름 + 직급 + 잔여 조사 완전 제거
@@ -267,7 +267,7 @@ async function main() {
     "꼼꼼한 상담 덕분에 좋은 차량 받았습니다",
     "장기렌트 출고 후기입니다",
     "빠르고 정확한 상담에 감동받았습니다",
-    "제로카즈 덕분에 마음에 드는 차량 수령했습니다",
+    "차차자요 덕분에 마음에 드는 차량 수령했습니다",
     "장기렌트 진행부터 출고까지 만족합니다",
     "신차 출고 완료! 대만족 후기입니다",
     "편리한 상담과 신속한 출고, 추천합니다",
@@ -342,7 +342,7 @@ async function main() {
       contractDate = new Date();
     }
     
-    // 1. 제목 및 본문 정제 (플래너 완전 제거 및 제로카즈 치환)
+    // 1. 제목 및 본문 정제 (플래너 완전 제거 및 차차자요 치환)
     const cleanTitle = refineTitle(r.title);
     const cleanContent = rebrandText(sanitizePlannerName(r.content || r.title));
     

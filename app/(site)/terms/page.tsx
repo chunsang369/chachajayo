@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "이용약관 — 제로카즈",
-  description: "제로카즈(ZeroCarz) 서비스 이용약관입니다.",
+  title: "이용약관 — 차차자요",
+  description: "차차자요(ChaChajayo) 서비스 이용약관입니다.",
 };
 
 export default function TermsPage() {
@@ -13,7 +13,7 @@ export default function TermsPage() {
 
         <div className="prose max-w-none text-sm text-[var(--color-text-muted)] leading-relaxed space-y-10">
           <p className="text-[var(--color-text)]">
-            주식회사 한신종합기획(이하 &quot;회사&quot;라 합니다)이 운영하는 제로카즈(이하 &quot;서비스&quot;라 합니다)의 이용 조건 및 절차, 이용자와 회사의 권리·의무·책임사항을 규정함을 목적으로 합니다.
+            주식회사 한신종합기획(이하 &quot;회사&quot;라 합니다)이 운영하는 차차자요(이하 &quot;서비스&quot;라 합니다)의 이용 조건 및 절차, 이용자와 회사의 권리·의무·책임사항을 규정함을 목적으로 합니다.
           </p>
 
           <section>
@@ -37,7 +37,7 @@ export default function TermsPage() {
                 <tbody>
                   <tr>
                     <td className="p-3 border border-[var(--color-border)] font-bold text-[var(--color-text)]">회사</td>
-                    <td className="p-3 border border-[var(--color-border)]">주식회사 한신종합기획 (브랜드명: 제로카즈)</td>
+                    <td className="p-3 border border-[var(--color-border)]">주식회사 한신종합기획 (브랜드명: 차차자요)</td>
                   </tr>
                   <tr>
                     <td className="p-3 border border-[var(--color-border)] font-bold text-[var(--color-text)]">서비스</td>
@@ -273,7 +273,7 @@ export default function TermsPage() {
                   </tr>
                   <tr>
                     <th className="p-3 border border-[var(--color-border)] bg-[var(--color-bg-subtle)] font-bold text-[var(--color-text)]">브랜드</th>
-                    <td className="p-3 border border-[var(--color-border)] text-[var(--color-text)]">제로카즈</td>
+                    <td className="p-3 border border-[var(--color-border)] text-[var(--color-text)]">차차자요</td>
                   </tr>
                   <tr>
                     <th className="p-3 border border-[var(--color-border)] bg-[var(--color-bg-subtle)] font-bold text-[var(--color-text)]">대표자</th>

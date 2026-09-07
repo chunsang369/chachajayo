@@ -372,7 +372,7 @@ export default function CarsListClient({
                       <div className="flex items-center gap-1.5 w-full">
                         <Link
                           href={`/cars/${car.slug}`}
-                          className="flex-1 py-2 rounded-lg bg-[var(--color-accent)] text-white text-xs font-bold shadow-xs hover:bg-[#3a8dc7] transition-all text-center"
+                          className="flex-1 py-2 rounded-lg bg-[var(--color-accent)] text-white text-xs font-bold shadow-xs hover:bg-[#E55D00] transition-all text-center"
                         >
                           견적보기
                         </Link>
@@ -386,7 +386,7 @@ export default function CarsListClient({
                               slug: car.slug,
                             })
                           }
-                          className="flex-1 py-2 rounded-lg bg-white border border-[var(--color-accent)] text-[var(--color-accent)] text-xs font-bold hover:bg-sky-50 transition-all cursor-pointer text-center"
+                          className="flex-1 py-2 rounded-lg bg-white border border-[var(--color-accent)] text-[var(--color-accent)] text-xs font-bold hover:bg-[#FFF4EB] transition-all cursor-pointer text-center"
                         >
                           빠른상담
                         </button>

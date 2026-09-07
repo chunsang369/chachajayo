@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "개인정보처리방침 — 제로카즈",
-  description: "제로카즈(ZeroCarz) 개인정보처리방침입니다.",
+  title: "개인정보처리방침 — 차차자요",
+  description: "차차자요(ChaChajayo) 개인정보처리방침입니다.",
 };
 
 export default function PrivacyPage() {
@@ -13,7 +13,7 @@ export default function PrivacyPage() {
 
         <div className="prose max-w-none text-sm text-[var(--color-text-muted)] leading-relaxed space-y-10">
           <p className="text-[var(--color-text)]">
-            주식회사 한신종합기획(이하 &quot;회사&quot;라 합니다)이 운영하는 제로카즈(이하 &quot;서비스&quot;라 합니다)는 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」, 「전기통신사업법」 등 관련 법령을 준수하며, 이용자의 개인정보를 보호하기 위해 본 개인정보처리방침을 수립·공개합니다.
+            주식회사 한신종합기획(이하 &quot;회사&quot;라 합니다)이 운영하는 차차자요(이하 &quot;서비스&quot;라 합니다)는 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」, 「전기통신사업법」 등 관련 법령을 준수하며, 이용자의 개인정보를 보호하기 위해 본 개인정보처리방침을 수립·공개합니다.
             <br />
             본 방침은 정부의 법률·지침 변경 또는 회사 내부방침 변경 시 개정될 수 있으며, 변경 시 서비스 공지사항을 통해 안내합니다.
           </p>
@@ -399,7 +399,7 @@ export default function PrivacyPage() {
                   </tr>
                   <tr>
                     <th className="p-3 border border-[var(--color-border)] bg-[var(--color-bg-subtle)] font-bold text-[var(--color-text)]">브랜드</th>
-                    <td className="p-3 border border-[var(--color-border)] text-[var(--color-text)]">제로카즈</td>
+                    <td className="p-3 border border-[var(--color-border)] text-[var(--color-text)]">차차자요</td>
                   </tr>
                   <tr>
                     <th className="p-3 border border-[var(--color-border)] bg-[var(--color-bg-subtle)] font-bold text-[var(--color-text)]">개인정보 보호책임자</th>

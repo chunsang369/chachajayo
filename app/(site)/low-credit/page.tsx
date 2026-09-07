@@ -6,7 +6,7 @@ import JetcarCarCatalog from "@/components/cars/JetcarCarCatalog";
 import QuickQuoteForm from "@/components/form/QuickQuoteForm";
 
 export const metadata: Metadata = {
-  title: "신차장기렌트 · 무심사 · 저신용 | 제로카즈",
+  title: "신차장기렌트 · 무심사 · 저신용 | 차차자요",
   description:
     "누구나 비대면 무심사 신차장기렌트. 신용등급 무관, 빠른 출고 가능한 신차 라인업을 확인해보세요.",
 };

@@ -10,21 +10,31 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zerocars.netlify.app"),
-  title: "제로카즈 | 안심정찰제 신차 장기렌트·리스 견적 비교",
+  title: "차차자요 | 신용무관승인제 신차 장기렌트·리스 견적 비교",
   description:
-    "제로카즈, 안심정찰제, 신차 장기렌트, 리스 최저가 견적을 비교하고 전문 매니저 상담을 무료로 받으세요. 국산·수입차 전 모델 대응.",
-  keywords: ["제로카즈", "안심정찰제", "장기렌트", "리스", "신차", "견적", "비교", "제로카즈"],
+    "차차자요, 신용무관승인제, 신차 장기렌트, 리스 최저가 견적을 비교하고 전문 매니저 상담을 무료로 받으세요. 국산·수입차 전 모델 대응.",
+  keywords: [
+    "차차자요",
+    "신용무관승인제",
+    "신차장기렌트",
+    "장기렌트",
+    "자동차리스",
+    "신차견적",
+    "장기렌트비교",
+    "무심사장기렌트",
+    "저신용장기렌트",
+  ],
   openGraph: {
-    title: "제로카즈 | 안심정찰제 신차 장기렌트·리스 견적 비교",
-    description: "제로카즈, 안심정찰제, 신차 장기렌트, 리스 최저가 견적을 비교하고 전문 매니저 상담을 무료로 받으세요. 국산·수입차 전 모델 대응.",
+    title: "차차자요 | 신용무관승인제 신차 장기렌트·리스 견적 비교",
+    description: "차차자요, 신용무관승인제, 신차 장기렌트, 리스 최저가 견적을 비교하고 전문 매니저 상담을 무료로 받으세요. 국산·수입차 전 모델 대응.",
     url: "https://zerocars.netlify.app",
-    siteName: "제로카즈",
+    siteName: "차차자요",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "제로카즈 - 신차 장기렌트·리스 견적 비교",
+        alt: "차차자요 - 신차 장기렌트·리스 견적 비교",
       },
     ],
     type: "website",
@@ -32,14 +42,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "제로카즈 | 안심정찰제 신차 장기렌트·리스 견적 비교",
-    description: "신차 장기렌트, 리스 최저가 견적 비교 플랫폼 제로카즈",
+    title: "차차자요 | 신용무관승인제 신차 장기렌트·리스 견적 비교",
+    description: "신차 장기렌트, 리스 최저가 견적 비교 플랫폼 차차자요",
     images: ["/og-image.png"],
   },
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
     shortcut: "/favicon.png",
-    apple: "/icon.png",
+    apple: "/apple-icon.png",
   },
   verification: {
     google: "EB-w_TSyKaAyvESBFKuCPe9ep1gR05l9RcP7Dy1ktHE",
