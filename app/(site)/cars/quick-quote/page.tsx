@@ -1,12 +1,42 @@
 export const dynamic = "force-static";
 
+import type { Metadata } from "next";
 import BrandGrid from "@/components/cars/BrandGrid";
 import QuickQuoteForm from "@/components/form/QuickQuoteForm";
 
-export const metadata = {
-  title: "빠른 간편견적 — 차차자요",
-  description:
-    "원하는 차량의 견적을 확실하고 빠르게 확인하실 수 있습니다. 브랜드별 차량 선택 후 간편하게 견적을 신청하세요.",
+const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 빠른 간편견적 신차리스 신차렌트";
+const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 공식 간편견적. 무심사 무보증 장기렌트, 저신용 리스, 신차렌트 1분 맞춤 무료 견적 신청 및 전문 상담.";
+const PAGE_URL = "https://chachajayo.vercel.app/cars/quick-quote";
+
+export const metadata: Metadata = {
+  title: SEO_TITLE,
+  description: SEO_DESC,
+  keywords: [
+    "차차자요",
+    "신용무관승인제",
+    "저신용 장기렌트",
+    "무심사 장기렌트",
+    "장기렌트",
+    "무보증 장기렌트",
+    "저신용 리스",
+    "신차리스",
+    "신차렌트",
+    "신차장기렌트",
+  ],
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: SEO_TITLE,
+    description: SEO_DESC,
+    url: PAGE_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: SEO_DESC,
+  },
 };
 
 export default function QuickQuotePage() {

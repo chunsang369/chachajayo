@@ -8,33 +8,55 @@ import ChannelTalk from "@/components/ChannelTalk";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
+const SITE_URL = "https://chachajayo.vercel.app";
+const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 무심사 무보증 장기렌트 신차리스 신차렌트 저신용 장기렌트";
+const SEO_DESCRIPTION = "차차자요 - 신용무관승인제, 저신용 장기렌트의 모든 것! 소득증빙·신용조회 없이 누구나 승인 가능한 무심사 무보증 장기렌트. 저신용 리스, 신차리스, 신차렌트 실시간 최저가 가격비교 및 간편 온라인 간편견적 상담.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zerocars.netlify.app"),
-  title: "차차자요 | 신용무관승인제 신차 장기렌트·리스 견적 비교",
-  description:
-    "차차자요, 신용무관승인제, 신차 장기렌트, 리스 최저가 견적을 비교하고 전문 매니저 상담을 무료로 받으세요. 국산·수입차 전 모델 대응.",
+  metadataBase: new URL(SITE_URL),
+  title: SEO_TITLE,
+  description: SEO_DESCRIPTION,
   keywords: [
     "차차자요",
     "신용무관승인제",
-    "신차장기렌트",
+    "저신용 장기렌트",
+    "무심사 장기렌트",
     "장기렌트",
-    "자동차리스",
-    "신차견적",
-    "장기렌트비교",
-    "무심사장기렌트",
-    "저신용장기렌트",
+    "무보증 장기렌트",
+    "저신용 리스",
+    "신차리스",
+    "신차렌트",
+    "신차장기렌트",
+    "장기렌트카",
+    "무심사렌트",
+    "신용불량장기렌트",
+    "개인회생장기렌트",
   ],
+  alternates: {
+    canonical: SITE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "차차자요 | 신용무관승인제 신차 장기렌트·리스 견적 비교",
-    description: "차차자요, 신용무관승인제, 신차 장기렌트, 리스 최저가 견적을 비교하고 전문 매니저 상담을 무료로 받으세요. 국산·수입차 전 모델 대응.",
-    url: "https://zerocars.netlify.app",
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
+    url: SITE_URL,
     siteName: "차차자요",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "차차자요 - 신차 장기렌트·리스 견적 비교",
+        alt: "차차자요 - 신용무관승인제 저신용 무심사 장기렌트·신차리스",
       },
     ],
     type: "website",
@@ -42,8 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "차차자요 | 신용무관승인제 신차 장기렌트·리스 견적 비교",
-    description: "신차 장기렌트, 리스 최저가 견적 비교 플랫폼 차차자요",
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
     images: ["/og-image.png"],
   },
   icons: {
@@ -71,7 +93,7 @@ export default function RootLayout({
     <html lang="ko" className={cn("h-full", "font-sans", geist.variable)} suppressHydrationWarning>
       <head>
         {/* 네이버 카페/블로그 및 SNS 썸네일 고정 */}
-        <link rel="image_src" href="https://zerocars.netlify.app/og-image.png" />
+        <link rel="image_src" href="https://chachajayo.vercel.app/og-image.png" />
         <link rel="preload" href="/og-image.png" as="image" />
         <link rel="preload" href="/logo.png" as="image" />
         <link rel="preload" href="/images/trust-consult-bg.png" as="image" />
@@ -79,6 +101,58 @@ export default function RootLayout({
         <link rel="preload" href="/images/cars-card-bg.png" as="image" />
         <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" as="style" crossOrigin="anonymous" />
         <link rel="preload" href="/images/trust-shield-bg.png" as="image" />
+        {/* 구글 및 네이버 검색엔진 최적화 구조화 데이터 (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "AutoRental",
+                  "@id": "https://chachajayo.vercel.app/#autorental",
+                  "name": "차차자요",
+                  "alternateName": [
+                    "신용무관승인제 차차자요",
+                    "차차자요 장기렌트",
+                    "ChaChajayo"
+                  ],
+                  "url": "https://chachajayo.vercel.app",
+                  "logo": "https://chachajayo.vercel.app/logo.png",
+                  "image": "https://chachajayo.vercel.app/og-image.png",
+                  "description": "차차자요 - 신용무관승인제, 저신용 장기렌트의 모든 것! 소득증빙·신용조회 없이 누구나 승인 가능한 무심사 무보증 장기렌트, 저신용 리스, 신차리스, 신차렌트 실시간 최저가 가격비교.",
+                  "telephone": "1666-8575",
+                  "priceRange": "₩₩",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "KR"
+                  },
+                  "knowsAbout": [
+                    "신용무관승인제",
+                    "저신용 장기렌트",
+                    "무심사 장기렌트",
+                    "무보증 장기렌트",
+                    "저신용 리스",
+                    "신차리스",
+                    "신차렌트",
+                    "신차장기렌트"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://chachajayo.vercel.app/#website",
+                  "url": "https://chachajayo.vercel.app",
+                  "name": "차차자요",
+                  "description": "신용무관승인제 무심사 무보증 저신용 장기렌트·신차리스 견적비교 플랫폼",
+                  "publisher": {
+                    "@id": "https://chachajayo.vercel.app/#autorental"
+                  },
+                  "inLanguage": "ko-KR"
+                }
+              ]
+            })
+          }}
+        />
         {/* 1차 차단막: Next.js 개발 에러 오버레이 화면 원천 은폐용 극초기 CSS (nextjs-portal은 지능형 필터에 의해 제어되므로 제외) */}
         <style
           dangerouslySetInnerHTML={{

@@ -4,9 +4,39 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getCachedReviews } from "@/lib/cache";
 
+const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 계약 후기 무심사 무보증 출고리뷰";
+const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 공식 고객후기. 신용불량·개인회생 무심사 승인 및 무보증 장기렌트, 저신용 리스 실제 출고 고객들의 생생한 이용 후기.";
+const PAGE_URL = "https://chachajayo.vercel.app/reviews";
+
 export const metadata: Metadata = {
-  title: "계약 후기 — 차차자요",
-  description: "차차자요에서 장기렌트·리스를 이용하신 고객님들의 생생한 후기를 확인하세요.",
+  title: SEO_TITLE,
+  description: SEO_DESC,
+  keywords: [
+    "차차자요",
+    "신용무관승인제",
+    "저신용 장기렌트",
+    "무심사 장기렌트",
+    "무보증 장기렌트",
+    "저신용 리스",
+    "신차리스",
+    "신차렌트",
+    "신용불량장기렌트",
+    "개인회생장기렌트",
+  ],
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: SEO_TITLE,
+    description: SEO_DESC,
+    url: PAGE_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: SEO_DESC,
+  },
 };
 
 export default async function ReviewsPage() {

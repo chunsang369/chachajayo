@@ -155,6 +155,7 @@ export default function HeroMain() {
               <div className="relative inline-flex items-start">
                 <h1 className="text-[44px] sm:text-[64px] lg:text-[76px] xl:text-[86px] font-black text-white leading-[1.08] tracking-tight drop-shadow-[0_3px_8px_rgba(0,0,0,0.18)]">
                   차 찾을 땐
+                  <span className="sr-only"> 차차자요 - 신용무관승인제 저신용 장기렌트 무심사 무보증 신차리스 신차렌트 견적비교</span>
                 </h1>
                 {/* 헤드라인 간결한 마무리 */}
               </div>
@@ -197,7 +198,7 @@ export default function HeroMain() {
                 <div className="relative w-full h-full">
                   <Image
                     src="/images/cars/3.png"
-                    alt="차차자요 대표 추천 차량"
+                    alt="차차자요 신용무관승인제 저신용 장기렌트 무심사 무보증 신차 출고"
                     fill
                     priority
                     loading="eager"

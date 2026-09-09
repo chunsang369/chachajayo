@@ -59,25 +59,22 @@ export default function HeroPromoBanner() {
               <div className="mb-5 sm:mb-7">
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-white text-xs font-bold tracking-tight">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  무심사 · 무보증 · 당일출고
+                  신용무관승인제 · 무심사 무보증 · 당일출고
                 </span>
               </div>
 
               {/* 메인 텍스트 */}
               <div className="space-y-1">
-                <h2 className="text-[26px] sm:text-[34px] lg:text-[42px] font-extrabold text-white leading-[1.2] tracking-tight">
-                  누구나 가능합니다
-                </h2>
-                <h2 className="text-[26px] sm:text-[34px] lg:text-[42px] font-extrabold text-white/70 leading-[1.2] tracking-tight">
-                  개인회생 · 파산신청 걱정 마세요
-                </h2>
-                <h2 className="text-[26px] sm:text-[34px] lg:text-[42px] font-extrabold text-white leading-[1.2] tracking-tight">
-                  끝까지 책임집니다
+                <h1 className="text-[26px] sm:text-[34px] lg:text-[42px] font-extrabold text-white leading-[1.2] tracking-tight">
+                  신용무관승인제 저신용 장기렌트
+                </h1>
+                <h2 className="text-[22px] sm:text-[28px] lg:text-[32px] font-extrabold text-white/80 leading-[1.2] tracking-tight">
+                  개인회생 · 신용불량 · 무심사 무보증 출고
                 </h2>
               </div>
 
-              <p className="text-sm sm:text-base text-white/60 font-medium mt-4 sm:mt-5">
-                신용점수 무관 · 소득증빙 무관 · 전국 어디서나 비대면 즉시 계약
+              <p className="text-sm sm:text-base text-white/70 font-medium mt-4 sm:mt-5">
+                신용점수 무관 · 소득증빙 무관 · 비대면 무심사 신차리스 및 신차렌트 전국 즉시 계약
               </p>
 
               {/* CTA */}
@@ -103,7 +100,7 @@ export default function HeroPromoBanner() {
               <div className="relative w-full max-w-[440px] lg:max-w-[500px] h-[200px] sm:h-[260px] lg:h-[340px] flex items-center justify-center">
                 <Image
                   src="/images/cars/hero-santafe.png"
-                  alt="무심사 장기렌트 차량"
+                  alt="차차자요 신용무관승인제 저신용 장기렌트 무심사 무보증 신차렌트 차량"
                   fill
                   className="object-contain object-center drop-shadow-2xl"
                   sizes="(max-width: 1024px) 100vw, 45vw"

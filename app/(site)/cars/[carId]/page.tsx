@@ -21,19 +21,43 @@ export async function generateMetadata({
   const { carId } = await params;
   const decodedCarId = decodeURIComponent(carId);
   const car = await getCachedCarBySlug(decodedCarId);
-  if (!car) return { title: "차량 상세 — 차차자요" };
+  if (!car) return { title: "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 차량 상세" };
 
-  const title = `${car.brand.name} ${car.modelName} ${car.trimName} | 차차자요 장기렌트·리스`;
-  const description = `${car.year}년형 ${car.brand.name} ${car.modelName} ${car.trimName} 장기렌트·리스 견적을 비교하세요. 월 납입료 확인 및 무료 상담.`;
+  const title = `차차자요 | 신용무관승인제 | 저신용 장기렌트 | ${car.brand.name} ${car.modelName} ${car.trimName} 견적비교`;
+  const description = `차차자요 | 신용무관승인제, 저신용 장기렌트 맞춤 견적. ${car.year}년형 ${car.brand.name} ${car.modelName} ${car.trimName} 무심사 무보증 장기렌트, 저신용 리스, 신차렌트 최저가 가격비교.`;
+  const pageUrl = `https://chachajayo.vercel.app/cars/${car.slug}`;
+
   return {
     title,
     description,
+    keywords: [
+      "차차자요",
+      "신용무관승인제",
+      "저신용 장기렌트",
+      "무심사 장기렌트",
+      "무보증 장기렌트",
+      "저신용 리스",
+      "신차리스",
+      "신차렌트",
+      `${car.brand.name} 장기렌트`,
+      `${car.modelName} 장기렌트`,
+    ],
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
       title,
       description,
-      images: [car.thumbnailUrl],
+      url: pageUrl,
+      images: [car.thumbnailUrl || "/og-image.png"],
       type: "website",
       locale: "ko_KR",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [car.thumbnailUrl || "/og-image.png"],
     },
   };
 }

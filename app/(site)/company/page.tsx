@@ -1,9 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 회사소개 신차리스 신차렌트 솔루션";
+const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 전문 기업 소개. 고객 신뢰를 최우선으로 하는 무심사 장기렌트, 무보증 신차리스, 신차렌트 맞춤 컨설팅 솔루션.";
+const PAGE_URL = "https://chachajayo.vercel.app/company";
+
 export const metadata: Metadata = {
-  title: "회사소개 — 차차자요",
-  description: "차차자요(ChaChajayo)는 신차 장기렌트·리스 전문 컨설팅 기업입니다. 고객 맞춤형 최저가 견적을 제공합니다.",
+  title: SEO_TITLE,
+  description: SEO_DESC,
+  keywords: [
+    "차차자요",
+    "신용무관승인제",
+    "저신용 장기렌트",
+    "무심사 장기렌트",
+    "무보증 장기렌트",
+    "저신용 리스",
+    "신차리스",
+    "신차렌트",
+    "장기렌트",
+  ],
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: SEO_TITLE,
+    description: SEO_DESC,
+    url: PAGE_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: SEO_DESC,
+  },
 };
 
 export default function CompanyPage() {

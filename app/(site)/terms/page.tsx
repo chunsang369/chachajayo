@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
 
+const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 서비스 이용약관";
+const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 서비스 이용약관 안내.";
+const PAGE_URL = "https://chachajayo.vercel.app/terms";
+
 export const metadata: Metadata = {
-  title: "이용약관 — 차차자요",
-  description: "차차자요(ChaChajayo) 서비스 이용약관입니다.",
+  title: SEO_TITLE,
+  description: SEO_DESC,
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: SEO_TITLE,
+    description: SEO_DESC,
+    url: PAGE_URL,
+    type: "website",
+  },
 };
 
 export default function TermsPage() {

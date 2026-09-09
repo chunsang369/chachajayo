@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
 
+const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 개인정보처리방침";
+const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 개인정보처리방침 안내.";
+const PAGE_URL = "https://chachajayo.vercel.app/privacy";
+
 export const metadata: Metadata = {
-  title: "개인정보처리방침 — 차차자요",
-  description: "차차자요(ChaChajayo) 개인정보처리방침입니다.",
+  title: SEO_TITLE,
+  description: SEO_DESC,
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: SEO_TITLE,
+    description: SEO_DESC,
+    url: PAGE_URL,
+    type: "website",
+  },
 };
 
 export default function PrivacyPage() {

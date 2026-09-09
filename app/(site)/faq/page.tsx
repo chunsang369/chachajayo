@@ -4,9 +4,39 @@ import type { Metadata } from "next";
 import FaqAccordionClient from "./FaqAccordionClient";
 import { getCachedFaqs } from "@/lib/cache";
 
+const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 자주 묻는 질문 FAQ 무심사 장기렌트";
+const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 FAQ. 무심사 장기렌트 자격 조건, 무보증 장기렌트 진행 절차, 저신용 리스 계약 안내 등 자주 묻는 질문 답변 모음.";
+const PAGE_URL = "https://chachajayo.vercel.app/faq";
+
 export const metadata: Metadata = {
-  title: "자주 묻는 질문 (FAQ) — 차차자요",
-  description: "장기렌트, 리스에 대해 자주 묻는 질문과 답변을 확인하세요.",
+  title: SEO_TITLE,
+  description: SEO_DESC,
+  keywords: [
+    "차차자요",
+    "신용무관승인제",
+    "저신용 장기렌트",
+    "무심사 장기렌트",
+    "무보증 장기렌트",
+    "저신용 리스",
+    "신차리스",
+    "신차렌트",
+    "신용불량장기렌트",
+    "개인회생장기렌트",
+  ],
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: SEO_TITLE,
+    description: SEO_DESC,
+    url: PAGE_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: SEO_DESC,
+  },
 };
 
 export default async function FaqPage() {

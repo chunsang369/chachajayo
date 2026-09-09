@@ -1,6 +1,7 @@
 export const revalidate = 3600;
 export const dynamicParams = true;
 
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CarCard from "@/components/cars/CarCard";
 import { getCachedBrandWithCars, getCachedBrandSlugs } from "@/lib/cache";
@@ -10,6 +11,51 @@ import { resolveListPrices } from "@/lib/pricing";
 export async function generateStaticParams() {
   const brands = await getCachedBrandSlugs();
   return brands.map((b: { slug: string }) => ({ slug: b.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const brand = await getCachedBrandWithCars(slug);
+  if (!brand) return { title: "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 브랜드" };
+
+  const title = `차차자요 | 신용무관승인제 | 저신용 장기렌트 | ${brand.name} 신차리스 신차렌트 견적비교`;
+  const description = `차차자요 | 신용무관승인제, 저신용 장기렌트 ${brand.name} 전 차종 안내. 무심사 무보증 장기렌트 및 신차리스, 신차렌트 최저가 실시간 견적비교.`;
+  const pageUrl = `https://chachajayo.vercel.app/cars/brands/${slug}`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      "차차자요",
+      "신용무관승인제",
+      "저신용 장기렌트",
+      "무심사 장기렌트",
+      "무보증 장기렌트",
+      "저신용 리스",
+      "신차리스",
+      "신차렌트",
+      `${brand.name} 장기렌트`,
+      `${brand.name} 신차리스`,
+    ],
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
 }
 
 export default async function BrandCarsPage({
