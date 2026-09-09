@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getCachedReviews } from "@/lib/cache";
 
-const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 계약 후기 무심사 무보증 출고리뷰";
-const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 공식 고객후기. 신용불량·개인회생 무심사 승인 및 무보증 장기렌트, 저신용 리스 실제 출고 고객들의 생생한 이용 후기.";
+const SEO_TITLE = "차차자요 | 신용무관승인제 저신용 장기렌트 계약후기";
+const SEO_DESC = "신용불량·개인회생 무심사 무보증 장기렌트, 저신용 리스 실제 출고 고객 후기.";
 const PAGE_URL = "https://chachajayo.vercel.app/reviews";
 
 export const metadata: Metadata = {

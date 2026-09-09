@@ -9,8 +9,8 @@ import ChannelTalk from "@/components/ChannelTalk";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const SITE_URL = "https://chachajayo.vercel.app";
-const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 무심사 무보증 장기렌트 신차리스 신차렌트 저신용 장기렌트";
-const SEO_DESCRIPTION = "차차자요 - 신용무관승인제, 저신용 장기렌트의 모든 것! 소득증빙·신용조회 없이 누구나 승인 가능한 무심사 무보증 장기렌트. 저신용 리스, 신차리스, 신차렌트 실시간 최저가 가격비교 및 간편 온라인 간편견적 상담.";
+const SEO_TITLE = "차차자요 | 신용무관승인제 저신용 무심사 무보증 장기렌트·신차리스";
+const SEO_DESCRIPTION = "차차자요 신용무관승인제! 저신용·무심사·무보증 장기렌트, 저신용 리스 및 신차리스·렌트 최저가 가격비교 상담.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -120,7 +120,7 @@ export default function RootLayout({
                   "url": "https://chachajayo.vercel.app",
                   "logo": "https://chachajayo.vercel.app/logo.png",
                   "image": "https://chachajayo.vercel.app/og-image.png",
-                  "description": "차차자요 - 신용무관승인제, 저신용 장기렌트의 모든 것! 소득증빙·신용조회 없이 누구나 승인 가능한 무심사 무보증 장기렌트, 저신용 리스, 신차리스, 신차렌트 실시간 최저가 가격비교.",
+                  "description": "차차자요 신용무관승인제! 저신용·무심사·무보증 장기렌트, 저신용 리스 및 신차리스·렌트 최저가 가격비교 상담.",
                   "telephone": "1666-8575",
                   "priceRange": "₩₩",
                   "address": {

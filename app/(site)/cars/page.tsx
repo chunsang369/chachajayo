@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import CarsListClient from "./CarsListClient";
 import { getCachedCars, getCachedBrands } from "@/lib/cache";
 
-const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 전체 차량 신차리스 신차렌트 가격비교";
-const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 전 차종 안내. 국산차·수입차 전 모델 무심사 무보증 장기렌트, 신차리스, 신차렌트 실시간 월 렌트료 비교 견적 제공.";
+const SEO_TITLE = "차차자요 | 신용무관승인제 저신용 장기렌트·신차리스 목록";
+const SEO_DESC = "차차자요 국산·수입 전 차종 무심사 무보증 장기렌트 및 신차리스 최저가 비교 견적.";
 const PAGE_URL = "https://chachajayo.vercel.app/cars";
 
 export const metadata: Metadata = {

@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import FaqAccordionClient from "./FaqAccordionClient";
 import { getCachedFaqs } from "@/lib/cache";
 
-const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 자주 묻는 질문 FAQ 무심사 장기렌트";
-const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 FAQ. 무심사 장기렌트 자격 조건, 무보증 장기렌트 진행 절차, 저신용 리스 계약 안내 등 자주 묻는 질문 답변 모음.";
+const SEO_TITLE = "차차자요 | 신용무관승인제 저신용 장기렌트 자주묻는질문";
+const SEO_DESC = "무심사 장기렌트 조건, 무보증 진행 절차, 저신용 리스 계약 안내 FAQ 모음.";
 const PAGE_URL = "https://chachajayo.vercel.app/faq";
 
 export const metadata: Metadata = {

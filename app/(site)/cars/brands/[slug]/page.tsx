@@ -22,8 +22,8 @@ export async function generateMetadata({
   const brand = await getCachedBrandWithCars(slug);
   if (!brand) return { title: "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 브랜드" };
 
-  const title = `차차자요 | 신용무관승인제 | 저신용 장기렌트 | ${brand.name} 신차리스 신차렌트 견적비교`;
-  const description = `차차자요 | 신용무관승인제, 저신용 장기렌트 ${brand.name} 전 차종 안내. 무심사 무보증 장기렌트 및 신차리스, 신차렌트 최저가 실시간 견적비교.`;
+  const title = `차차자요 | ${brand.name} 저신용·무심사 장기렌트 신차리스`;
+  const description = `차차자요 ${brand.name} 전 차종 무심사 무보증 장기렌트 및 신차리스 최저가 비교 견적.`;
   const pageUrl = `https://chachajayo.vercel.app/cars/brands/${slug}`;
 
   return {

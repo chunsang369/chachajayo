@@ -5,8 +5,8 @@ import HeroPromoBanner from "@/components/layout/HeroPromoBanner";
 import JetcarCarCatalog from "@/components/cars/JetcarCarCatalog";
 import QuickQuoteForm from "@/components/form/QuickQuoteForm";
 
-const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 무심사 무보증 장기렌트 저신용 리스 출고";
-const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 공식 안내. 신용등급 무관 심사 없는 무심사 장기렌트 및 무보증 장기렌트, 저신용 리스 즉시 출고 가능 차량 라인업.";
+const SEO_TITLE = "차차자요 | 신용무관승인제 저신용·무심사 무보증 장기렌트";
+const SEO_DESC = "차차자요 신용무관승인제! 저신용·무심사 무보증 장기렌트 및 리스 즉시 출고 라인업.";
 const PAGE_URL = "https://chachajayo.vercel.app/low-credit";
 
 export const metadata: Metadata = {

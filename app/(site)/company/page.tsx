@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 회사소개 신차리스 신차렌트 솔루션";
-const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 전문 기업 소개. 고객 신뢰를 최우선으로 하는 무심사 장기렌트, 무보증 신차리스, 신차렌트 맞춤 컨설팅 솔루션.";
+const SEO_TITLE = "차차자요 | 신용무관승인제 저신용 장기렌트 회사소개";
+const SEO_DESC = "고객 맞춤형 무심사 무보증 장기렌트, 신차리스 전문 차차자요 기업 소개.";
 const PAGE_URL = "https://chachajayo.vercel.app/company";
 
 export const metadata: Metadata = {

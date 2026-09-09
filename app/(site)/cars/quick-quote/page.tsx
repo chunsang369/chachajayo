@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import BrandGrid from "@/components/cars/BrandGrid";
 import QuickQuoteForm from "@/components/form/QuickQuoteForm";
 
-const SEO_TITLE = "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 빠른 간편견적 신차리스 신차렌트";
-const SEO_DESC = "차차자요 | 신용무관승인제, 저신용 장기렌트 공식 간편견적. 무심사 무보증 장기렌트, 저신용 리스, 신차렌트 1분 맞춤 무료 견적 신청 및 전문 상담.";
+const SEO_TITLE = "차차자요 | 신용무관승인제 저신용 장기렌트 빠른 간편견적";
+const SEO_DESC = "차차자요 무심사 무보증 장기렌트, 저신용 리스 1분 맞춤 무료 견적 신청.";
 const PAGE_URL = "https://chachajayo.vercel.app/cars/quick-quote";
 
 export const metadata: Metadata = {

@@ -23,8 +23,8 @@ export async function generateMetadata({
   const car = await getCachedCarBySlug(decodedCarId);
   if (!car) return { title: "차차자요 | 신용무관승인제 | 저신용 장기렌트 | 차량 상세" };
 
-  const title = `차차자요 | 신용무관승인제 | 저신용 장기렌트 | ${car.brand.name} ${car.modelName} ${car.trimName} 견적비교`;
-  const description = `차차자요 | 신용무관승인제, 저신용 장기렌트 맞춤 견적. ${car.year}년형 ${car.brand.name} ${car.modelName} ${car.trimName} 무심사 무보증 장기렌트, 저신용 리스, 신차렌트 최저가 가격비교.`;
+  const title = `차차자요 | ${car.brand.name} ${car.modelName} 저신용·무심사 장기렌트`;
+  const description = `차차자요 ${car.year}년형 ${car.brand.name} ${car.modelName} 무심사 무보증 장기렌트·신차리스 최저가 견적.`;
   const pageUrl = `https://chachajayo.vercel.app/cars/${car.slug}`;
 
   return {
